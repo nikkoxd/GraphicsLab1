@@ -1,7 +1,5 @@
 #include <SFML/Graphics.hpp>
-
-#define offset 10
-#define pixel_size 10
+#include "defines.h"
 
 sf::Vector2i toScreen(sf::RenderWindow& window, sf::Vector2i pixel)
 {

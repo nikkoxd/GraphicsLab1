@@ -1,4 +1,5 @@
-#include "cda.cpp"
+#include "cda.h"
+#include "util.h"
 #include <SFML/Graphics.hpp>
 
 int main()
