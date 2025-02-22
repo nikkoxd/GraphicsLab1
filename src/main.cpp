@@ -18,17 +18,17 @@ int main()
 
         drawGrid(window);
 
-        drawLineCDA(window, {0, 4}, {4, 0});
-        drawLineCDA(window, {4, 0}, {8, 0});
-        drawLineCDA(window, {8, 0}, {20, 8});
-        drawLineCDA(window, {20, 8}, {20, 20});
-        drawLineCDA(window, {8, 12}, {20, 20});
-        drawLineCDA(window, {4, 12}, {8, 12});
-        drawLineCDA(window, {4, 12}, {0, 16});
-        drawLineCDA(window, {0, 4}, {0, 16});
-        drawLineCDA(window, {4, 0}, {4, 12});
-        drawLineCDA(window, {8, 0}, {8, 12});
-        drawLineCDA(window, {0, 16}, {20, 20});
+        drawLineCDA(window, {0, 4}, {4, 0}, {0, 20});
+        drawLineCDA(window, {4, 0}, {8, 0}, {0, 20});
+        drawLineCDA(window, {8, 0}, {20, 8}, {0, 20});
+        drawLineCDA(window, {20, 8}, {20, 20}, {0, 20});
+        drawLineCDA(window, {8, 12}, {20, 20}, {0, 20});
+        drawLineCDA(window, {4, 12}, {8, 12}, {0, 20});
+        drawLineCDA(window, {4, 12}, {0, 16}, {0, 20});
+        drawLineCDA(window, {0, 4}, {0, 16}, {0, 20});
+        drawLineCDA(window, {4, 0}, {4, 12}, {0, 20});
+        drawLineCDA(window, {8, 0}, {8, 12}, {0, 20});
+        drawLineCDA(window, {0, 16}, {20, 20}, {0, 20});
 
         window.display();
     }

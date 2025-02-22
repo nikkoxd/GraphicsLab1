@@ -1,5 +1,6 @@
-#include <SFML/Graphics.hpp>
+#include "util.h"
 #include "defines.h"
+#include <SFML/Graphics.hpp>
 
 sf::Vector2i toScreen(sf::RenderWindow& window, sf::Vector2i pixel)
 {
