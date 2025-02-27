@@ -18,38 +18,36 @@ int main()
             {
                 window.close();
             }
+            else if (const auto* keyReleased = event->getIf<sf::Event::KeyReleased>())
+            {
+              if (keyReleased->code == sf::Keyboard::Key::Enter)
+              {
+                randomLine = getRandomLine({0, 0}, {50, 30});
+              }
+            }
         }
 
         window.clear(sf::Color::White);
 
         drawGrid(window);
 
+        float scale = 4.0;
         sf::Vector2f offset = {5, 35};
-        drawLineCDA(window, {0, 4}, {4, 0}, offset);
-        drawLineCDA(window, {4, 0}, {8, 0}, offset);
-        drawLineCDA(window, {8, 0}, {20, 8}, offset);
-        drawLineCDA(window, {20, 8}, {20, 20}, offset);
-        drawLineCDA(window, {8, 12}, {20, 20}, offset);
-        drawLineCDA(window, {4, 12}, {8, 12}, offset);
-        drawLineCDA(window, {4, 12}, {0, 16}, offset);
-        drawLineCDA(window, {0, 4}, {0, 16}, offset);
-        drawLineCDA(window, {4, 0}, {4, 12}, offset);
-        drawLineCDA(window, {8, 0}, {8, 12}, offset);
-        drawLineCDA(window, {0, 16}, {20, 20}, offset);
+        drawLineCDA(window, {0, 1}, {1, 0}, offset, scale);
+        drawLineCDA(window, {1, 0}, {2, 0}, offset, scale);
+        drawLineCDA(window, {2, 0}, {5, 2}, offset, scale);
+        drawLineCDA(window, {5, 2}, {5, 5}, offset, scale);
+        drawLineCDA(window, {2, 3}, {5, 5}, offset, scale);
+        drawLineCDA(window, {1, 3}, {2, 3}, offset, scale);
+        drawLineCDA(window, {1, 3}, {0, 4}, offset, scale);
+        drawLineCDA(window, {0, 1}, {0, 4}, offset, scale);
+        drawLineCDA(window, {1, 0}, {1, 3}, offset, scale);
+        drawLineCDA(window, {2, 0}, {2, 3}, offset, scale);
+        drawLineCDA(window, {0, 4}, {5, 5}, offset, scale);
 
         drawLineCDA(window, {-1, 0}, {(float)window.getSize().x, 0}, {0, 30});
         drawLineCDA(window, {0, 30}, {0, (float)window.getSize().y}, {35, 0});
         
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Enter))
-        {
-          wasEnterPressed = true;
-        }
-        else if (wasEnterPressed)
-        {
-          randomLine = getRandomLine({0, 0}, {50, 30});
-          wasEnterPressed = false;
-        }
-
         drawLineCDA(window, randomLine[0], randomLine[1]);
 
         window.display();
