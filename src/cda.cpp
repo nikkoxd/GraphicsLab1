@@ -32,3 +32,18 @@ void drawLineCDA(sf::RenderWindow& window, sf::Vector2f start, sf::Vector2f end,
     position.y += dy;
   }
 }
+
+void drawShapeCDA(sf::RenderWindow& window, sf::Vector2f offset, float scale)
+{
+  drawLineCDA(window, {0, 1}, {1, 0}, offset, scale);
+  drawLineCDA(window, {1, 0}, {2, 0}, offset, scale);
+  drawLineCDA(window, {2, 0}, {5, 2}, offset, scale);
+  drawLineCDA(window, {5, 2}, {5, 5}, offset, scale);
+  drawLineCDA(window, {2, 3}, {5, 5}, offset, scale);
+  drawLineCDA(window, {1, 3}, {2, 3}, offset, scale);
+  drawLineCDA(window, {1, 3}, {0, 4}, offset, scale);
+  drawLineCDA(window, {0, 1}, {0, 4}, offset, scale);
+  drawLineCDA(window, {1, 0}, {1, 3}, offset, scale);
+  drawLineCDA(window, {2, 0}, {2, 3}, offset, scale);
+  drawLineCDA(window, {0, 4}, {5, 5}, offset, scale);
+}

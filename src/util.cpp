@@ -1,3 +1,4 @@
+#include "cda.h"
 #include "util.h"
 #include "defines.h"
 #include <SFML/Graphics.hpp>
@@ -45,3 +46,10 @@ void drawGrid(sf::RenderWindow& window)
     }
   }
 }
+
+void drawSeparators(sf::RenderWindow& window)
+{
+  drawLineCDA(window, {-1, 0}, {(float)window.getSize().x, 0}, {0, 30});
+  drawLineCDA(window, {0, 30}, {0, (float)window.getSize().y}, {35, 0});
+}
+

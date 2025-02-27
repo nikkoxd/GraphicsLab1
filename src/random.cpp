@@ -1,3 +1,4 @@
+#include "cda.h"
 #include "random.h"
 #include <random>
 
@@ -18,4 +19,9 @@ std::vector<sf::Vector2f> getRandomLine(sf::Vector2f start, sf::Vector2f end, sf
   sf::Vector2f end_point{(float)dis_x(gen), (float)dis_y(gen)};
 
   return {start_point, end_point};
+}
+
+void drawRandomLine(sf::RenderWindow& window, std::vector<sf::Vector2f> line)
+{
+  drawLineCDA(window, line[0], line[1]);
 }

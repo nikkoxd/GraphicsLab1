@@ -30,25 +30,11 @@ int main()
         window.clear(sf::Color::White);
 
         drawGrid(window);
+        drawSeparators(window);
 
         float scale = 4.0;
-        sf::Vector2f offset = {5, 35};
-        drawLineCDA(window, {0, 1}, {1, 0}, offset, scale);
-        drawLineCDA(window, {1, 0}, {2, 0}, offset, scale);
-        drawLineCDA(window, {2, 0}, {5, 2}, offset, scale);
-        drawLineCDA(window, {5, 2}, {5, 5}, offset, scale);
-        drawLineCDA(window, {2, 3}, {5, 5}, offset, scale);
-        drawLineCDA(window, {1, 3}, {2, 3}, offset, scale);
-        drawLineCDA(window, {1, 3}, {0, 4}, offset, scale);
-        drawLineCDA(window, {0, 1}, {0, 4}, offset, scale);
-        drawLineCDA(window, {1, 0}, {1, 3}, offset, scale);
-        drawLineCDA(window, {2, 0}, {2, 3}, offset, scale);
-        drawLineCDA(window, {0, 4}, {5, 5}, offset, scale);
-
-        drawLineCDA(window, {-1, 0}, {(float)window.getSize().x, 0}, {0, 30});
-        drawLineCDA(window, {0, 30}, {0, (float)window.getSize().y}, {35, 0});
-        
-        drawLineCDA(window, randomLine[0], randomLine[1]);
+        drawShapeCDA(window, {5, 35}, scale);
+        drawRandomLine(window, randomLine);
 
         window.display();
     }
