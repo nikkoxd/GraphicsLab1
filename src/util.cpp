@@ -24,10 +24,10 @@ void drawPseudoPixel(sf::RenderWindow& window, sf::Vector2i origin)
       sf::Vertex point{current, sf::Color::Black};
       window.draw(&point, 1, sf::PrimitiveType::Points);
 
-      current.x += 0.1;
+      current.x += 1;
     }
     current.x = float(origin.x);
-    current.y += 0.1;
+    current.y += 1;
   }
 }
 
