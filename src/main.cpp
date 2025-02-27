@@ -1,3 +1,4 @@
+#include <iostream>
 #include "cda.h"
 #include "util.h"
 #include <SFML/Graphics.hpp>
@@ -18,17 +19,20 @@ int main()
 
         drawGrid(window);
 
-        drawLineCDA(window, {0, 4}, {4, 0}, {0, 20});
-        drawLineCDA(window, {4, 0}, {8, 0}, {0, 20});
-        drawLineCDA(window, {8, 0}, {20, 8}, {0, 20});
-        drawLineCDA(window, {20, 8}, {20, 20}, {0, 20});
-        drawLineCDA(window, {8, 12}, {20, 20}, {0, 20});
-        drawLineCDA(window, {4, 12}, {8, 12}, {0, 20});
-        drawLineCDA(window, {4, 12}, {0, 16}, {0, 20});
-        drawLineCDA(window, {0, 4}, {0, 16}, {0, 20});
-        drawLineCDA(window, {4, 0}, {4, 12}, {0, 20});
-        drawLineCDA(window, {8, 0}, {8, 12}, {0, 20});
-        drawLineCDA(window, {0, 16}, {20, 20}, {0, 20});
+        drawLineCDA(window, {0, 4}, {4, 0}, {0, 35});
+        drawLineCDA(window, {4, 0}, {8, 0}, {0, 35});
+        drawLineCDA(window, {8, 0}, {20, 8}, {0, 35});
+        drawLineCDA(window, {20, 8}, {20, 20}, {0, 35});
+        drawLineCDA(window, {8, 12}, {20, 20}, {0, 35});
+        drawLineCDA(window, {4, 12}, {8, 12}, {0, 35});
+        drawLineCDA(window, {4, 12}, {0, 16}, {0, 35});
+        drawLineCDA(window, {0, 4}, {0, 16}, {0, 35});
+        drawLineCDA(window, {4, 0}, {4, 12}, {0, 35});
+        drawLineCDA(window, {8, 0}, {8, 12}, {0, 35});
+        drawLineCDA(window, {0, 16}, {20, 20}, {0, 35});
+
+        std::cout << window.getSize().x << std::endl;
+        drawLineCDA(window, {-1, 0}, {(float)window.getSize().x, 0}, {0, 30});
 
         window.display();
     }
