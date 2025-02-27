@@ -10,8 +10,8 @@ void drawLineCDA(sf::RenderWindow& window, sf::Vector2f start, sf::Vector2f end,
 
   sf::Vector2f position = start;
 
-  float dx = end.x - start.x;
-  float dy = end.y - start.y;
+  float dx = (int)end.x - (int)start.x;
+  float dy = (int)end.y - (int)start.y;
 
   int l = dx > dy ? dx : dy;
 
