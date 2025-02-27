@@ -1,8 +1,13 @@
 #include "cda.h"
 #include "util.h"
 
-void drawLineCDA(sf::RenderWindow& window, sf::Vector2f start, sf::Vector2f end, sf::Vector2f offset)
+void drawLineCDA(sf::RenderWindow& window, sf::Vector2f start, sf::Vector2f end, sf::Vector2f offset, float scale)
 {
+  start.x *= scale;
+  start.y *= scale;
+  end.x *= scale;
+  end.y *= scale;
+
   start.x += offset.x;
   start.y += offset.y;
   end.x += offset.x;
