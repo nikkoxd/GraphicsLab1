@@ -13,7 +13,7 @@ void drawLineCDA(sf::RenderWindow& window, sf::Vector2f start, sf::Vector2f end,
   float dx = (int)end.x - (int)start.x;
   float dy = (int)end.y - (int)start.y;
 
-  int l = dx > dy ? dx : dy;
+  int l = std::abs(dx) > std::abs(dy) ? std::abs(dx) : std::abs(dy);
 
   dx = dx / l;
   dy = dy / l;
