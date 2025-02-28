@@ -16,6 +16,7 @@ FetchContent_MakeAvailable(SFML)
 add_executable(main 
   src/main.cpp
   src/cda.cpp
+  src/bresenham.cpp
   src/util.cpp
   src/random.cpp
 )
