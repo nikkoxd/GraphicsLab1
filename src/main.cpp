@@ -1,4 +1,6 @@
+#include "bresenham.h"
 #include "random.h"
+#include "bresenham.h"
 #include "cda.h"
 #include "util.h"
 #include <SFML/Graphics.hpp>
@@ -34,6 +36,7 @@ int main()
 
         float scale = 4.0;
         drawShapeCDA(window, {5, 35}, scale);
+        drawShapeBresenham(window, {45, 35}, scale);
         drawRandomLine(window, randomLine);
 
         window.display();

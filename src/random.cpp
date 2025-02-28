@@ -1,4 +1,4 @@
-#include "cda.h"
+#include "bresenham.h"
 #include "random.h"
 #include <random>
 
@@ -23,5 +23,5 @@ std::vector<sf::Vector2f> getRandomLine(sf::Vector2f start, sf::Vector2f end, sf
 
 void drawRandomLine(sf::RenderWindow& window, std::vector<sf::Vector2f> line)
 {
-  drawLineCDA(window, line[0], line[1]);
+  drawLineBresenham(window, line[0], line[1]);
 }
